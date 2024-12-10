@@ -1,0 +1,325 @@
+Metadata-Version: 2.1
+Name: intrinsicHDR
+Version: 0.0.1
+Summary: A package containing to the code for the paper "Intrinsic Single-Image HDR Reconstruction"
+Home-page: 
+Author: Sebastian Dille
+Author-email: sdille@sfu.ca
+Requires-Python: >3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: absl-py==2.1.0
+Requires-Dist: accelerate==0.21.0
+Requires-Dist: aiohttp==3.8.5
+Requires-Dist: aiosignal==1.3.1
+Requires-Dist: antialiased-cnns==0.3
+Requires-Dist: antlr4-python3-runtime==4.9.3
+Requires-Dist: anyio==3.7.1
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: arrow==1.2.3
+Requires-Dist: asttokens==2.4.1
+Requires-Dist: astunparse==1.6.3
+Requires-Dist: async-timeout==4.0.3
+Requires-Dist: attrs==23.1.0
+Requires-Dist: backcall==0.2.0
+Requires-Dist: beautifulsoup4==4.12.2
+Requires-Dist: bleach==6.2.0
+Requires-Dist: blessed==1.20.0
+Requires-Dist: cachetools==5.3.2
+Requires-Dist: certifi==2023.7.22
+Requires-Dist: cffi==1.16.0
+Requires-Dist: charset-normalizer==3.2.0
+Requires-Dist: click==8.1.7
+Requires-Dist: cloudpickle==3.0.0
+Requires-Dist: cmake==3.27.2
+Requires-Dist: colorama==0.4.6
+Requires-Dist: colour==0.1.5
+Requires-Dist: contourpy==1.1.0
+Requires-Dist: croniter==1.3.15
+Requires-Dist: cryptography==41.0.7
+Requires-Dist: cycler==0.11.0
+Requires-Dist: dateutils==0.6.12
+Requires-Dist: decorator==5.1.1
+Requires-Dist: deepdiff==6.3.1
+Requires-Dist: defusedxml==0.7.1
+Requires-Dist: denoising-diffusion-pytorch==1.8.9
+Requires-Dist: dill==0.3.7
+Requires-Dist: diskcache==5.6.3
+Requires-Dist: docker-pycreds==0.4.0
+Requires-Dist: docopt==0.6.2
+Requires-Dist: docstring-parser==0.15
+Requires-Dist: einops==0.6.1
+Requires-Dist: ema-pytorch==0.2.3
+Requires-Dist: exceptiongroup==1.1.3
+Requires-Dist: executing==2.0.1
+Requires-Dist: fastapi==0.88.0
+Requires-Dist: fastjsonschema==2.20.0
+Requires-Dist: filelock==3.12.2
+Requires-Dist: flatbuffers==24.3.25
+Requires-Dist: fonttools==4.42.0
+Requires-Dist: frozenlist==1.4.0
+Requires-Dist: fsspec==2023.6.0
+Requires-Dist: future==0.18.3
+Requires-Dist: gast==0.4.0
+Requires-Dist: geffnet==1.0.2
+Requires-Dist: gitdb==4.0.10
+Requires-Dist: GitPython==3.1.32
+Requires-Dist: google-auth==2.26.2
+Requires-Dist: google-auth-oauthlib==0.4.6
+Requires-Dist: google-pasta==0.2.0
+Requires-Dist: h11==0.14.0
+Requires-Dist: h5py==3.10.0
+Requires-Dist: huggingface-hub==0.20.1
+Requires-Dist: hydra-core==1.3.2
+Requires-Dist: idna==3.4
+Requires-Dist: imageio==2.31.1
+Requires-Dist: importlib-resources==6.0.1
+Requires-Dist: importlib_metadata==8.5.0
+Requires-Dist: inquirer==3.1.3
+Requires-Dist: ipdb==0.13.13
+Requires-Dist: ipython
+Requires-Dist: itsdangerous==2.1.2
+Requires-Dist: ivy==0.0.5.1
+Requires-Dist: jedi==0.19.1
+Requires-Dist: Jinja2==3.1.2
+Requires-Dist: jsonargparse==4.23.1
+Requires-Dist: jsonpickle==3.0.2
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: jsonschema-specifications==2024.10.1
+Requires-Dist: jupyter_client==8.6.3
+Requires-Dist: jupyter_core==5.7.2
+Requires-Dist: jupyterlab_pygments==0.3.0
+Requires-Dist: keras==2.10.0
+Requires-Dist: keras-nightly==2.5.0.dev2021032900
+Requires-Dist: Keras-Preprocessing==1.1.2
+Requires-Dist: kiwisolver==1.4.4
+Requires-Dist: kornia==0.7.0
+Requires-Dist: lazy_loader==0.3
+Requires-Dist: libclang==18.1.1
+Requires-Dist: lightning==1.9.5
+Requires-Dist: lightning-cloud==0.5.37
+Requires-Dist: lightning-utilities==0.9.0
+Requires-Dist: lit==16.0.6
+Requires-Dist: Markdown==3.7
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==2.1.3
+Requires-Dist: matplotlib==3.7.2
+Requires-Dist: matplotlib-inline==0.1.6
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: mistune==3.0.2
+Requires-Dist: ml-dtypes==0.2.0
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: multidict==6.0.4
+Requires-Dist: namex==0.0.8
+Requires-Dist: nbclient==0.10.0
+Requires-Dist: nbconvert==7.16.4
+Requires-Dist: nbformat==5.10.4
+Requires-Dist: networkx==3.1
+Requires-Dist: numpy==1.25.2
+Requires-Dist: nvidia-cublas-cu11==11.10.3.66
+Requires-Dist: nvidia-cuda-cupti-cu11==11.7.101
+Requires-Dist: nvidia-cuda-nvrtc-cu11==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu11==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu12==12.6.77
+Requires-Dist: nvidia-cudnn-cu11==8.5.0.96
+Requires-Dist: nvidia-cufft-cu11==10.9.0.58
+Requires-Dist: nvidia-curand-cu11==10.2.10.91
+Requires-Dist: nvidia-cusolver-cu11==11.4.0.1
+Requires-Dist: nvidia-cusparse-cu11==11.7.4.91
+Requires-Dist: nvidia-ml-py==12.535.133
+Requires-Dist: nvidia-nccl-cu11==2.14.3
+Requires-Dist: nvidia-nvtx-cu11==11.7.91
+Requires-Dist: oauthlib==3.2.2
+Requires-Dist: omegaconf==2.3.0
+Requires-Dist: opencv-python==4.8.0.76
+Requires-Dist: OpenEXR==1.3.9
+Requires-Dist: opt-einsum==3.3.0
+Requires-Dist: optree==0.13.0
+Requires-Dist: ordered-set==4.1.0
+Requires-Dist: packaging==23.1
+Requires-Dist: pandocfilters==1.5.1
+Requires-Dist: parso==0.8.3
+Requires-Dist: pathtools==0.1.2
+Requires-Dist: pexpect==4.9.0
+Requires-Dist: pickleshare==0.7.5
+Requires-Dist: Pillow==10.0.0
+Requires-Dist: pipreqs==0.5.0
+Requires-Dist: platformdirs==4.3.6
+Requires-Dist: prompt-toolkit==3.0.43
+Requires-Dist: protobuf==3.19.6
+Requires-Dist: psutil==5.9.5
+Requires-Dist: ptyprocess==0.7.0
+Requires-Dist: pure-eval==0.2.2
+Requires-Dist: pyasn1==0.5.1
+Requires-Dist: pyasn1-modules==0.3.0
+Requires-Dist: pycparser==2.21
+Requires-Dist: pydantic==1.10.12
+Requires-Dist: PyEXR==0.3.10
+Requires-Dist: Pygments==2.16.1
+Requires-Dist: PyJWT==2.8.0
+Requires-Dist: pyOpenSSL==23.3.0
+Requires-Dist: pyparsing==3.0.9
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: python-editor==1.0.4
+Requires-Dist: python-multipart==0.0.6
+Requires-Dist: pytorch-fid==0.3.0
+Requires-Dist: pytorch-lightning==1.9.0
+Requires-Dist: pytz==2023.3
+Requires-Dist: pyvis==0.3.2
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: pyzmq
+Requires-Dist: rawpy==0.19.0
+Requires-Dist: readchar==4.0.5
+Requires-Dist: referencing==0.35.1
+Requires-Dist: requests==2.31.0
+Requires-Dist: requests-oauthlib==2.0.0
+Requires-Dist: rich==13.5.2
+Requires-Dist: rpds-py==0.20.1
+Requires-Dist: rsa==4.9
+Requires-Dist: safetensors==0.4.1
+Requires-Dist: scikit-image==0.22.0
+Requires-Dist: scipy==1.11.2
+Requires-Dist: sentry-sdk==1.29.2
+Requires-Dist: setproctitle==1.3.2
+Requires-Dist: six==1.16.0
+Requires-Dist: smmap==5.0.0
+Requires-Dist: sniffio==1.3.0
+Requires-Dist: soupsieve==2.4.1
+Requires-Dist: stack-data==0.6.3
+Requires-Dist: starlette==0.22.0
+Requires-Dist: starsessions==1.3.0
+Requires-Dist: sympy==1.12
+Requires-Dist: tensorboard==2.10.1
+Requires-Dist: tensorboard-data-server==0.6.1
+Requires-Dist: tensorboard-plugin-wit==1.8.1
+Requires-Dist: tensorboardX
+Requires-Dist: tensorflow-estimator==2.10.0
+Requires-Dist: tensorflow-gpu==2.10.0
+Requires-Dist: tensorflow-io-gcs-filesystem==0.37.1
+Requires-Dist: tensorrt==10.6.0
+Requires-Dist: tensorrt-cu12==10.6.0
+Requires-Dist: tensorrt-cu12-bindings==10.6.0
+Requires-Dist: tensorrt-cu12-libs==10.6.0
+Requires-Dist: termcolor==2.4.0
+Requires-Dist: tf-slim==1.1.0
+Requires-Dist: tifffile==2023.12.9
+Requires-Dist: timm==0.9.12
+Requires-Dist: tinycss2==1.4.0
+Requires-Dist: tomli==2.0.1
+Requires-Dist: torch==2.0.1
+Requires-Dist: torchgeometry==0.1.2
+Requires-Dist: torchmetrics==1.0.3
+Requires-Dist: torchvision==0.15.2
+Requires-Dist: tornado==6.4.1
+Requires-Dist: tqdm==4.66.1
+Requires-Dist: traitlets==5.9.0
+Requires-Dist: triton==2.0.0
+Requires-Dist: typeshed-client==2.3.0
+Requires-Dist: typing_extensions==4.7.1
+Requires-Dist: urllib3==1.26.18
+Requires-Dist: uvicorn==0.23.2
+Requires-Dist: wandb==0.15.8
+Requires-Dist: wcwidth==0.2.6
+Requires-Dist: webencodings==0.5.1
+Requires-Dist: websocket-client==1.6.1
+Requires-Dist: websockets==11.0.3
+Requires-Dist: Werkzeug==3.1.3
+Requires-Dist: wrapt==1.12.1
+Requires-Dist: yarg==0.1.9
+Requires-Dist: yarl==1.9.2
+Requires-Dist: zipp==3.20.2
+
+
+---
+
+<div align="center">    
+ 
+# Intrinsic Single-Image HDR Reconstruction  
+
+[![Project](http://img.shields.io/badge/project-intrinsicHDR-cc9933.svg)](https://yaksoy.github.io/intrinsicHDR/)
+[![Video](http://img.shields.io/badge/video-YouTube-4b44ce.svg)](https://www.youtube.com/watch?v=EiyH52BcKkw)
+[![Paper](http://img.shields.io/badge/paper-ECCV2024-B31B1B.svg)](https://arxiv.org/abs/2409.13803)
+[![Supplementary](http://img.shields.io/badge/suppl.-intrinsicHDR-B31B1B.svg)](https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR-supp.pdf)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/compphoto/IntrinsicHDR/blob/main/notebooks/intrinsicHDR.ipynb)  
+
+
+</div>
+ 
+
+
+## Description   
+
+
+The low dynamic range (LDR) of common cameras fails to capture the rich contrast in natural scenes, resulting in loss of color and details in saturated pixels. Reconstructing the high dynamic range (HDR) of luminance present in the scene from single LDR photographs is an important task with many applications in computational photography and realistic display of images. The HDR reconstruction task aims to infer the lost details using the context present in the scene, requiring neural networks to understand high-level geometric and illumination cues. This makes it challenging for data-driven algorithms to generate accurate and high-resolution results. 
+
+![teaser](./figures/representative.jpg)
+
+In this work, we introduce a physically-inspired remodeling of the HDR reconstruction problem in the intrinsic domain. The intrinsic model allows us to train separate networks to extend the dynamic range in the shading domain and to recover lost color details in the albedo domain. We show that dividing the problem into two simpler sub-tasks improves performance in a wide variety of photographs.   
+
+![pipeline](./figures/pipeline.jpg)
+
+Try out our pipeline on your own images in Colab! [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/compphoto/IntrinsicHDR/blob/main/notebooks/intrinsicHDR.ipynb)
+
+## How to run   
+First, install dependencies. The code was tested with Python 3.9. It is recommended to start with a fresh environment:
+```bash
+# create empty env
+python3 -m venv intrHDR_env
+
+# activate env
+source intrHDR_env/bin/activate
+```
+Next, clone this repository and install the requirements. Make sure that pip is up-to-date (python3 -m pip install --upgrade pip):
+
+```bash
+# clone project   
+git clone https://github.com/compphoto/IntrinsicHDR
+
+# install project   
+cd IntrinsicHDR
+pip install .
+ ```   
+
+The pipeline expects input images to be linear. 
+To dequantize and linearize images, run:
+
+ ```bash
+# download pretrained weights 'model.ckpt.*' and put them into "./baselines/SingleHDR/checkpoints"
+wget https://github.com/compphoto/IntrinsicHDR/releases/download/v1.0/model.ckpt.data-00000-of-00001
+wget https://github.com/compphoto/IntrinsicHDR/releases/download/v1.0/model.ckpt.index 
+wget https://github.com/compphoto/IntrinsicHDR/releases/download/v1.0/model.ckpt.meta 
+
+# create checkpoint directory
+mkdir ./baselines/SingleHDR/checkpoints
+
+# move weights to checkpoint directory.
+mv model.ckpt* ./baselines/SingleHDR/checkpoints/.
+
+# run linearization, e.g.  
+python3 dequantize_and_linearize.py --test_imgs /path/to/input/imgs --output_path /path/to/results --root .
+```
+ Now, run our HDR reconstruction pipeline. The results will be saved as EXR files in --output_path:  
+ ```bash
+# run module, e.g.  
+python3 inference.py --test_imgs /path/to/input/imgs --output_path /path/to/results --use_exr
+```
+
+
+
+### Citation
+This implementation is provided for academic use only. Please cite our paper if you use this code or any of the models.   
+```
+@INPROCEEDINGS{dilleIntrinsicHDR,
+author={Sebastian Dille and Chris Careaga and Ya\u{g}{\i}z Aksoy},
+title={Intrinsic Single-Image HDR Reconstruction},
+booktitle={Proc. ECCV},
+year={2024},
+} 
+```   
+
+### Credits
+"./baselines/SingleHDR/" is adapted from [SingleHDR](https://github.com/alex04072000/SingleHDR) for their dequantization and linearization network.
+
+".intrinsic_decomposition" is adapted from [IntrinsicImageDecomposition](https://github.com/compphoto/Intrinsic) for the decomposition network.
+
+".src/midas/" is adapted from [MiDaS](https://github.com/intel-isl/MiDaS/tree/v2) for their EfficientNet implementation.
