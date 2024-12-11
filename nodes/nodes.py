@@ -65,7 +65,7 @@ class HDRConversion:
         #root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
         #root = os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR")
         root = os.path.normpath(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR"))
-        root = root.replace("\\", "\")
+        root = root.decode('string_escape')
 
         print("IMAGE TYPE: ", type(image))
 
