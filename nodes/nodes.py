@@ -67,10 +67,10 @@ class HDRConversion:
 
         if os.name == 'nt':
             # Root starts with ComfyUI
-            root = os.path.normpath(os.path.join("ComfyUI","custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR"))
+            root = "ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
 
         else:
-            root = os.path.normpath(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR"))
+            root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
 
         print("IMAGE TYPE: ", type(image))
 
@@ -82,9 +82,9 @@ class HDRConversion:
         #with tf.compat.v1.variable_scope(tf.compat.v1.get_variable_scope(), reuse=tf.compat.v1.AUTO_REUSE):
         #dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
         if os.name == 'nt':
-            dequantize_and_linearize_run(os.path.normpath(os.path.join("ComfyUI","custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp")).encode('utf-8').decode('unicode_escape'), root)
+            dequantize_and_linearize_run("ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
         else:
-            dequantize_and_linearize_run(os.path.normpath(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp")).encode('utf-8').decode('unicode_escape'), root)
+            dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
         # Save the image in downloads folder
         #image.save(output + "/" + image_name)
 
@@ -92,9 +92,9 @@ class HDRConversion:
         # Run inference
         #inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp",output_path,image_name)
         if os.name == 'nt':
-            inference(os.path.normpath(os.path.join("ComfyUI","custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp")).encode('utf-8').decode('unicode_escape'), output_path, image_name)
+            inference("ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", output_path, image_name)
         else:
-            inference(os.path.normpath(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp")).encode('utf-8').decode('unicode_escape'), output_path, image_name)
+            inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", output_path, image_name)
         #save_exr(image, output + "/" + image_name)
 
         # Remove tf stream

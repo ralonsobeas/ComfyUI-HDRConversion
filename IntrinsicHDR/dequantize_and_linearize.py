@@ -216,7 +216,7 @@ def dequantize_and_linearize_run(test_imgs, root, start_id=0, end_id=None):
         #restorer0.restore(sess, root + '/baselines/SingleHDR/checkpoints/model.ckpt')
         #checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
 
-        checkpoint_path = os.path.normpath(os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')).encode('utf-8').decode('unicode_escape')
+        checkpoint_path = root + '/baselines/SingleHDR/checkpoints/model.ckpt'
         restorer0.restore(sess, checkpoint_path)
         
 
@@ -230,7 +230,7 @@ def dequantize_and_linearize_run(test_imgs, root, start_id=0, end_id=None):
         try:
             #restorer.restore(sess, root + '/baselines/SingleHDR/checkpoints/model.ckpt')
             #checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
-            checkpoint_path = os.path.normpath(os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')).encode('utf-8').decode('unicode_escape')
+            checkpoint_path = root + '/baselines/SingleHDR/checkpoints/model.ckpt'
 
             restorer.restore(sess, checkpoint_path)
             print("Model restored successfully from checkpoint.")
