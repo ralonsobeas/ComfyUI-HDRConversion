@@ -328,7 +328,7 @@ class AEInvcrfDecodeNet(BaseNet):
 
             # Si el sistema operativo es Windows, ajusta la ruta para que comience con 'ComfyUI/'
             if os.name == 'nt':
-                base_path = Path('ComfyUI') / base_path.relative_to('custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR')
+                base_path = Path('ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR/invemor.txt')
 
             # Convierte la ruta a una cadena sin procesar
             file_path = str(base_path)
