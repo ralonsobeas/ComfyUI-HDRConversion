@@ -323,9 +323,14 @@ class AEInvcrfDecodeNet(BaseNet):
             #file_path = os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')
             file_path = os.path.normpath(os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')).encode('utf-8').decode('unicode_escape')
 
-            with open(r'custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR/invemor.txt', 'r') as f:
-                lines = f.readlines()
-                lines = [line.strip() for line in lines]
+            if os.name == 'nt':
+                with open(r'custom_nodes\ComfyUI-HDRConversion\IntrinsicHDR\baselines\SingleHDR\invemor.txt', 'r') as f:
+                    lines = f.readlines()
+                    lines = [line.strip() for line in lines]
+            else:
+                with open(file_path, 'r') as f:
+                    lines = f.readlines()
+                    lines = [line.strip() for line in lines]
 
             b = _parse(lines, 'B =')
             g0 = _parse(lines, 'g0 =')
