@@ -62,8 +62,8 @@ class HDRConversion:
 
     def to_hdr(self, image,output_path,image_name):
 
-        root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
-
+        #root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
+        root = os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR")
         print("IMAGE TYPE: ", type(image))
 
         save_image(image, root)
@@ -72,14 +72,15 @@ class HDRConversion:
         # Run linearization
         
         #with tf.compat.v1.variable_scope(tf.compat.v1.get_variable_scope(), reuse=tf.compat.v1.AUTO_REUSE):
-        dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
-      
+        #dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
+        dequantize_and_linearize_run(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp"), root)
         # Save the image in downloads folder
         #image.save(output + "/" + image_name)
 
         
         # Run inference
-        inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp",output_path,image_name)
+        #inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp",output_path,image_name)
+        inference(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp"), output_path, image_name)
         #save_exr(image, output + "/" + image_name)
 
         # Remove tf stream
