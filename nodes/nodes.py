@@ -63,7 +63,15 @@ class HDRConversion:
     def to_hdr(self, image,output_path,image_name):
 
         #root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
-        root = os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR")
+        #root = os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR")
+
+        if os.name == 'nt':
+            # Root starts with ComfyUI
+            root = "ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
+
+        else:
+            root = "custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR"
+
         print("IMAGE TYPE: ", type(image))
 
         save_image(image, root)
@@ -73,14 +81,20 @@ class HDRConversion:
         
         #with tf.compat.v1.variable_scope(tf.compat.v1.get_variable_scope(), reuse=tf.compat.v1.AUTO_REUSE):
         #dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
-        dequantize_and_linearize_run(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp"), root)
+        if os.name == 'nt':
+            dequantize_and_linearize_run("ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
+        else:
+            dequantize_and_linearize_run("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", root)
         # Save the image in downloads folder
         #image.save(output + "/" + image_name)
 
         
         # Run inference
         #inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp",output_path,image_name)
-        inference(os.path.join("custom_nodes", "ComfyUI-HDRConversion", "IntrinsicHDR", "tmp"), output_path, image_name)
+        if os.name == 'nt':
+            inference("ComfyUI/custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", output_path, image_name)
+        else:
+            inference("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/tmp", output_path, image_name)
         #save_exr(image, output + "/" + image_name)
 
         # Remove tf stream
