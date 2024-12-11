@@ -324,17 +324,18 @@ class AEInvcrfDecodeNet(BaseNet):
             #with open(os.path.join('baselines/SingleHDR','invemor.txt'), 'r') as f:
             #with open(os.path.join('custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR','invemor.txt'), 'r') as f:
             #file_path = os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')
-            file_path = os.path.normpath(os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')).encode('utf-8').decode('unicode_escape')
-            file_path = Path("custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR/")
-            file_path = file_path / "invemor.txt"
+            # Define la ruta del archivo usando Path
+            file_path = Path('custom_nodes/ComfyUI-HDRConversion/IntrinsicHDR/baselines/SingleHDR/invemor.txt')
 
+            # Si el sistema operativo es Windows, convierte la ruta a una cadena sin procesar
+            if os.name == 'nt':
+                file_path = Path(str(file_path).replace('/', '\\'))
+
+            # Abre el archivo usando la ruta correcta
             with open(file_path, 'r') as f:
-                    lines = f.readlines()
-                    lines = [line.strip() for line in lines]
+                lines = f.readlines()
+                lines = [line.strip() for line in lines]
 
-            b = _parse(lines, 'B =')
-            g0 = _parse(lines, 'g0 =')
-            hinv = np.stack([_parse(lines, 'hinv(%d)=' % (i + 1)) for i in range(11)], axis=-1)
 
             return b, g0, hinv
 
