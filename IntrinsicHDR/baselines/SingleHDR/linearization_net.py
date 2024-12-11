@@ -323,7 +323,7 @@ class AEInvcrfDecodeNet(BaseNet):
             #file_path = os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')
             file_path = os.path.normpath(os.path.join('custom_nodes', 'ComfyUI-HDRConversion', 'IntrinsicHDR', 'baselines', 'SingleHDR', 'invemor.txt')).replace("\\\\", "\\")
 
-            with open(file_path, 'r') as f:
+            with open(r"file_path", 'r') as f:
                 lines = f.readlines()
                 lines = [line.strip() for line in lines]
 
