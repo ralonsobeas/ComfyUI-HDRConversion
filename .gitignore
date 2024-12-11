@@ -1,0 +1,2 @@
+# Ignore everything inside the checkpoints directory
+IntrinsicHDR/baselines/SingleHDR/checkpoints/*
