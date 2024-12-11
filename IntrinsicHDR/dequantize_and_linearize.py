@@ -214,7 +214,8 @@ def dequantize_and_linearize_run(test_imgs, root, start_id=0, end_id=None):
 
         restorer0 = tf.compat.v1.train.Saver(var_list=[var for var in tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) if 'Dequantization_Net' in var.name])
         #restorer0.restore(sess, root + '/baselines/SingleHDR/checkpoints/model.ckpt')
-        checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
+        #checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
+        checkpoint_path = os.path.normpath(os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt'))
         restorer0.restore(sess, checkpoint_path)
         
 
@@ -227,7 +228,9 @@ def dequantize_and_linearize_run(test_imgs, root, start_id=0, end_id=None):
         # Restore the variables from the checkpoint
         try:
             #restorer.restore(sess, root + '/baselines/SingleHDR/checkpoints/model.ckpt')
-            checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
+            #checkpoint_path = os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt')
+            checkpoint_path = os.path.normpath(os.path.join(root, 'baselines', 'SingleHDR', 'checkpoints', 'model.ckpt'))
+
             restorer.restore(sess, checkpoint_path)
             print("Model restored successfully from checkpoint.")
         except tf.errors.NotFoundError as e:
